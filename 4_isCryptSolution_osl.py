@@ -1,3 +1,6 @@
+# https://app.codesignal.com/challenge/KkRXXEt9DwaHFYk2K
+
+
 def isCryptSolution(crypt, solution):
     sdict = {i[0]:i[1] for i in solution}
     translate = lambda astring: "".join([sdict[i] for i in astring])
