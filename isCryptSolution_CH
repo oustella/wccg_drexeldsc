@@ -1,0 +1,12 @@
+def isCryptSolution(crypt, solution):
+    pairs = [[i for i in solution if i[0] in word] for word in crypt]
+
+    lst = []
+    for x, pair in enumerate(pairs):
+        a = ''.join(j[1]  for i in crypt[x] for j in pairs[x] if i == j[0])
+        if a[0] == '0' and len(a) >1:
+            return False
+        else:
+            lst.append(a)
+    
+    return sum(int(i) for i in lst[:-1]) == int(lst[-1])
